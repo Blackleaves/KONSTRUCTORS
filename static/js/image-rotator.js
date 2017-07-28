@@ -1,4 +1,5 @@
 var iter = 2;
+var sliderLoop;
 
 function slideSwitch() {
     var next_video_id = 'slider-video-' + iter;
@@ -79,6 +80,9 @@ function slideMove(image_number) {
 
     iter = image_number;
     slideSwitch();
+
+    clearInterval(sliderLoop);
+    sliderLoop = setInterval(function(){ slideSwitch() }, 5000);
 }
 
 function prevSlide () {
@@ -86,19 +90,6 @@ function prevSlide () {
 	slideMove(iter);
 }
 
-function calculateHeight(){
-    sliderWidth = $(".slideshow-wrapper").width();
-    calculatedHeight = parseInt(sliderWidth * 0.375) + "px";
-    $(".slideshow-wrapper").css({ "height": calculatedHeight });
-    $(".slideshow").css({ "height": calculatedHeight });
-}
-
 $(document).ready(function() {
-	// calculateHeight();
-
-	// $(window).resize(function() {
-	//     calculateHeight();
-	// });
-
-	setInterval('slideSwitch()', 5000 );
+    sliderLoop = setInterval(function(){ slideSwitch() }, 5000);
 });
