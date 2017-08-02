@@ -14,6 +14,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src='static/js/image-rotator.js' type="text/javascript"></script>
+    <!-- <script src='static/js/image-rotator2.js' type="text/javascript"></script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:500,700" rel="stylesheet">
@@ -33,12 +34,12 @@
                 </div>
                 <div class="slider-image img-3"></div>
                 <div class="slider-image img-4">
-                    <video poster="static/images/image-4.jpg" id="slider-video-4" class="slider-video" playsinline muted loop>
+                    <video poster="" id="slider-video-4" class="slider-video" playsinline muted loop>
                         <source src="static/videos/death_maze.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="overlay"></div>
             </div>
+            <div class="overlay"></div>
             <div class="slideshow-controllers">
                 <div id="slideshow-titles" class="slideshow-titles">
                     <div class="slideshow-title title-1 active">WAYOUT</div>
@@ -47,10 +48,10 @@
                     <div class="slideshow-title title-4">DEATH MAZE</div>
                 </div>
                 <div class="slide-points">
-                    <div class="slide-changer slide-point-1 slide-point-active" onclick="slideMove(1)"></div>
-                    <div class="slide-changer slide-point-2" onclick="slideMove(2)"></div>
-                    <div class="slide-changer slide-point-3" onclick="slideMove(3)"></div>
-                    <div class="slide-changer slide-point-4" onclick="slideMove(4)"></div>
+                    <button class="slide-changer slide-point-1 slide-point-active" onclick="slideMove(1)" disabled></button>
+                    <button class="slide-changer slide-point-2" onclick="slideMove(2)"></button>
+                    <button class="slide-changer slide-point-3" onclick="slideMove(3)"></button>
+                    <button class="slide-changer slide-point-4" onclick="slideMove(4)"></button>
                 </div>
                 <div id="slideshow-blocks" class="slideshow-blocks">
                     <div class="slideshow-block block-1 active">
