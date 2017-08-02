@@ -1,6 +1,5 @@
 var iter = 2;
 var maxIteration = 0;
-var titleArray;
 
 function slideSwitch() {
     var next_video_id = 'slider-video-' + iter;
@@ -12,36 +11,32 @@ function slideSwitch() {
     /* image */
     var current_image = $('#slideshow div.active');
     var next_image = $('#slideshow div.next');
-
     current_image.addClass('last-active');
     next_image.addClass('active').css({opacity: 0.0, left: '+=100%'}).animate({opacity: 1.0, left: '-=100%'}, 1000, function() {stopVideo(); next_image.removeClass('next');});
     current_image.css({opacity: 1.0}).animate({opacity: 0.0}, 1500, function() {current_image.removeClass('active').removeClass('last-active');});
 
     /* title */
-
     var current_title = $('#slideshow-titles div.active');
     var next_title = $('#slideshow-titles div.next');
-
     current_title.addClass('last-active');
     next_title.addClass('active').css({opacity: 0.0, left: '+=200px'}).animate({opacity: 1.0, left: '-=200px'}, 1000, function() {next_title.removeClass('next');});
     current_title.css({opacity: 1.0}).animate({opacity: 0.0, left: '-=100px'}, 1000, function() {current_title.removeClass('active').removeClass('last-active').css({left: '+=100px'});});
 
     /* block */
-
     var current_block = $('#slideshow-blocks div.active');
     var next_block = $('#slideshow-blocks div.next');
-
     current_block.addClass('last-active');
     next_block.addClass('active').css({opacity: 0.0, left: '+=200px'}).animate({opacity: 1.0, left: '-=200px'}, 1000, function() {next_block.removeClass('next');});
     current_block.css({opacity: 1.0}).animate({opacity: 0.0, left: '-=100px'}, 1000, function() {current_block.removeClass('active').removeClass('last-active').css({left: '+=100px'});});
 
-
+    /* pointer */
     var point = $('.slide-point-active');
     point.prop("disabled", false).removeClass('slide-point-active');
     var point_class = '.slide-point-' + iter;
     point = $(point_class);
     point.addClass('slide-point-active').prop("disabled", true);
 
+    /* marking next */
 	if (iter<maxIteration) {iter++;} else{iter=1;};
     var image_class = '.img-' + iter;
     var future_image = $(image_class);
@@ -85,12 +80,6 @@ function slideMove(image_number) {
 }
 
 $(document).ready(function() {
-	// calculateHeight();
-
-	// $(window).resize(function() {
-	//     calculateHeight();
-	// });
-
     maxIteration = $(".slideshow-title").length;
 
 	setInterval('slideSwitch()', 5000 );

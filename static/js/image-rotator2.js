@@ -114,12 +114,6 @@ function slideSwitch2() {
 }
 
 $(document).ready(function() {
-	// calculateHeight();
-
-	// $(window).resize(function() {
-	//     calculateHeight();
-	// });
-	// setInterval('slideSwitch2()', 5000 );
 
     imageArray = $(".slider-image");
     titleArray = $(".slideshow-title");

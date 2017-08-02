@@ -32,13 +32,15 @@ form {padding: 0; margin: 0;}
 	font-family: 'Montserrat', Arial, sans-serif; font-size: 10.5px; line-height: 11px; font-weight: 400; color: #35383c;}
 .logo b {font-size: 19.5px; font-weight: 800;}
 .button-free {float: right; display: block; width: 128px; height: 30px; background: #00e6a2; border-radius: 2px; color: #fff;
-	font-family: 'Oswald', Arial, sans-serif; font-weight: 700; font-size: 10px; text-align: center; line-height: 30px; text-transform: uppercase;}
-.button-free:hover {text-decoration: none; cursor: pointer; box-shadow: inset 0 0 3px 0 rgba(0,0,0,.2);}
+	font-family: 'Oswald', Arial, sans-serif; font-weight: 700; font-size: 10px; text-align: center; line-height: 30px; text-transform: uppercase;
+	-webkit-transition-duration: .5s; transition-duration: .5s;}
+.button-free:hover {text-decoration: none; cursor: pointer; box-shadow: 0 0 3px 0 rgba(0,0,0,.3);}
 
 .social {float: left; clear: left; width: 27px; height: 79px; margin: 240px 0 245px 30px; box-sizing: border-box;
 	border: 1px solid #d4d5d8; border-bottom: none; border-radius: 1px; opacity: .99;}
 .social-link {float: left; width: 25px; height: 25px; border-bottom: 1px solid #d4d5d8;
-	background: transparent url(../images/social.png) center center no-repeat;}
+	background: transparent url(../images/social.png) center center no-repeat;
+	-webkit-transition-duration: .5s; transition-duration: .5s;}
 .social-link:hover {text-decoration: none; cursor: pointer; box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5);}
 
 .social .twitter {background-position: 0 0;}
@@ -55,7 +57,8 @@ form {padding: 0; margin: 0;}
 	display: -webkit-flex; -webkit-flex-direction: row; -webkit-flex-wrap: wrap; -webkit-justify-content: space-between; -webkit-align-items: flex-start; -webkit-align-content: flex-start;
 	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; align-content: flex-start;
 	width: 40%; min-width: 250px; padding: 0 0 50px 34%; opacity: .99;}
-.nav-link {position: relative; display: block;  padding: 0; margin: 0 5px; font-size: 10px; line-height: 15px; color: #c6c4c4; text-align: left;}
+.nav-link {position: relative; display: block;  padding: 0; margin: 0 5px; font-size: 10px; line-height: 15px; color: #c6c4c4; text-align: left;
+	-webkit-transition-duration: .5s; transition-duration: .5s;}
 .nav-link:hover {text-decoration: none; cursor: pointer; color: #999;}
 
 .nav-link:first-child {margin-left: 0;}
@@ -127,7 +130,8 @@ form {padding: 0; margin: 0;}
 	width: 100%; padding-top: 10px;}
 
 .sale {position: relative; display: block; min-width: 275px; max-width: 350px; width: 22.5%; height: 200px; margin: 30px 20px 0 0; box-sizing: border-box;
-	color: #fff; font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 23px; line-height: 25px; text-align: center;}
+	color: #fff; font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 23px; line-height: 25px; text-align: center;
+	-webkit-transition-duration: .5s; transition-duration: .5s;}
 .sale:hover {text-decoration: none; cursor: pointer; box-shadow: inset 0 0 15px rgba(255,255,255,.25);}
 
 .sale:last-child {margin-right: 0;}
@@ -172,6 +176,7 @@ form {padding: 0; margin: 0;}
 .footer-social {float: right; width: 79px; height: 27px; margin: 0;
 	border: 1px solid #35383c; border-right: none; border-radius: 1px; box-sizing: border-box;}
 .footer-social .social-link {float: right; border-bottom: none; border-right: 1px solid #35383c;}
+.footer-social .social-link:hover {box-shadow: inset 0 0 1px 0 rgba(255,255,255,.5);}
 
 .footer-social .twitter {background-position: 0 -25px;}
 .footer-social .instagram {background-position: -25px -25px;}
@@ -211,7 +216,8 @@ form {padding: 0; margin: 0;}
 
 @media only screen and (max-width: 1140px) {
 	.header {padding-left: calc(50% - 250px); padding-right: calc(50% - 240px);}
-	.navigation {padding-left: calc(50% - 240px);}
+	.navigation {width: 300px; padding-left: calc(50% - 240px); padding-right: calc(50% - 240px);}
+	.nav-link {font-size: 11px;}
 
 	.sign-text {width: 41%; padding-left: 45px; background-position: 15px 49%;}
 	.subscribe-box input {width: calc(59% - 120px);}
