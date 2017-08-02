@@ -86,19 +86,6 @@ function slideMove(image_number) {
     slideSwitch();
 }
 
-function prevSlide () {
-	iter = (iter-2)>0 ? (iter-2) : (iter+2);
-	slideMove(iter);
-}
-
-function calculateHeight(){
-    sliderWidth = $(".slideshow-wrapper").width();
-    calculatedHeight = parseInt(sliderWidth * 0.375) + "px";
-    $(".slideshow-wrapper").css({ "height": calculatedHeight });
-    $(".slideshow").css({ "height": calculatedHeight });
-}
-
-
 function slideSwitch2() {
         
     /* image */
@@ -135,8 +122,8 @@ $(document).ready(function() {
 	// setInterval('slideSwitch2()', 5000 );
 
     imageArray = $(".slider-image");
-    titleArray = $(".slider-title");
-    blockArray = $(".slider-block");
+    titleArray = $(".slideshow-title");
+    blockArray = $(".slideshow-block");
     maxIteration = Math.max(imageArray.length, titleArray.length, blockArray.length);
 
 
