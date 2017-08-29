@@ -1,3 +1,4 @@
+var sliderLoop;
 var slideInterval = null;
 var switchTime = 0;
 var allSlides = "";
@@ -13,7 +14,7 @@ var pageData = {
          "video": ""},
         {"image-url": "static/images/image-2.jpg",
          "title": "LINKAGE",
-         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus purus. Praesent ornare ac nisl scelerisque volutpat. Quisque ac tellus malesuada, dictum libero in, imperdiet erat. Mauris ultrices tellus in ex auctor ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nec tristique augue, at accumsan enim. Praesent eleifend eleifend posuere. Quisque in sem semper, feugiat ante blandit, dapibus metus.",
+         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus purus. Praesent ornare ac nisl scelerisque volutpat. Quisque ac tellus malesuada, dictum libero in, imperdiet erat. Mauris ultrices tellus in ex auctor ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nec tristique augue, at accumsan enim.",
          "video": "<video poster='static/images/image-2.jpg' id='slider-video-1' class='slider-video' playsinline muted loop><source src='static/videos/linkage.mp4' type='video/mp4'></video>"},
         {"image-url": "static/images/image-3.jpg",
          "title": "GR1D",
@@ -45,7 +46,7 @@ function generateSlider() {
     }
     var slide_points = "";
     for(var i=0;i<sliderData.length; ++i) {
-        slide_points += (i == 0) ? "<button class='slide-changer p"+i+" slide-point-active'></button>" : "<button class='slide-changer p"+i+"'></button>";
+        slide_points += (i == 0) ? "<button class='slide-changer p"+i+" slide-point-active' onclick='slideMove("+i+")'></button>" : "<button class='slide-changer p"+i+"' onclick='slideMove("+i+")'></button>";
     }
     pointBox.append(slide_points);
 }
@@ -109,6 +110,13 @@ function slideSwitch() {
     point.addClass('slide-point-active').prop("disabled", true);
 }
 
+function slideMove(number){
+    slideSwitch(number);
+
+    clearInterval(sliderLoop);
+    sliderLoop = setInterval(function(){ slideSwitch() }, 4000);
+}
+
 function stopVideo(){
     try {
         var last_video_id = 'slider-video-' + ((iter >1) ? iter : 1);
@@ -116,27 +124,11 @@ function stopVideo(){
     } catch(err){}
 }
 
-function setClickOnSliderDots() {
-    var allSlides = document.querySelectorAll("div.slider");
-    for(var i=0; i<allSlides.length; ++i) {
-        $("div.slideshow-points > button",allSlides[i]).on("click",function() {
-            if(!$(this).hasClass("active")) {
-                var num = ( Array.isArray(/p(\d{1,})/.exec(this.className)) ) ? (/p(\d{1,})/.exec(this.className))[1] : null ;
-                if(num && curNum) {
-                    console.log(num);
-                    slideSwitch(num)
-                }
-            }
-        });
-    }
-}
-
 $(function(){
     generateSlider();
-    setClickOnSliderDots();
     allSlides = $("div.slideshow-image");
     allTitles = $("div.slideshow-title");
     allBlocks = $("div.slideshow-block");
     allPoints = $(".slide-changer");
-    slideInterval = setInterval(slideSwitch, 4000);
+    sliderLoop = setInterval(function(){ slideSwitch() }, 4000);
 });
