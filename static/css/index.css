@@ -27,7 +27,7 @@ form {padding: 0; margin: 0;}
 
 .main-controls {float: left; width: 50%; width: calc(50% + 18px); height: 100%;}
 
-.header {float: right; width: 56%; max-width: 400px; height: 30px; padding: 40px 10% 0 34%; opacity: .99;}
+.header {float: right; width: 56%; min-width: 300px; max-width: 400px; height: 30px; padding: 40px 10% 0 34%; opacity: .99;}
 .logo {float: left; display: block; width: 170px; height: 26px; padding-top: 6px; /*background: transparent url(../images/konstructors.png) center center no-repeat; background-size: contain;*/
 	font-family: 'Montserrat', Arial, sans-serif; font-size: 10.5px; line-height: 11px; font-weight: 400; color: #35383c;}
 .logo b {font-size: 19.5px; font-weight: 800;}
@@ -56,7 +56,7 @@ form {padding: 0; margin: 0;}
 .navigation {float: right; clear: both;
 	display: -webkit-flex; -webkit-flex-direction: row; -webkit-flex-wrap: wrap; -webkit-justify-content: space-between; -webkit-align-items: flex-start; -webkit-align-content: flex-start;
 	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; align-content: flex-start;
-	width: 56%; min-width: 250px; max-width: 400px; padding: 0 10% 50px 34%; opacity: .99;}
+	width: 56%; min-width: 300px; max-width: 400px; padding: 0 10% 50px 34%; opacity: .99;}
 .nav-link {position: relative; display: block;  padding: 0; margin: 0 5px; font-size: 10px; line-height: 15px; color: #c6c4c4; text-align: left;
 	-webkit-transition-duration: .5s; transition-duration: .5s;}
 .nav-link:hover {text-decoration: none; cursor: pointer; color: #999;}
@@ -72,7 +72,7 @@ form {padding: 0; margin: 0;}
 
 .slideshow-titles {position: absolute; top: 240px; right: 0; width: 100%; height: 80px; box-sizing: border-box; overflow: hidden;
 	font-family: 'Oswald', sans-serif; font-size: 54px; line-height: 54px; font-weight: 500; color: #35383c;}
-#slideshow-titles .slideshow-title {position: absolute; top: 0; right: 10%; margin: 0 auto; width: 56%; max-width: 400px; z-index: 8; display: none;}
+#slideshow-titles .slideshow-title {position: absolute; top: 0; right: 10%; margin: 0 auto; width: 56%; min-width: 300px; max-width: 400px; z-index: 8; display: none;}
 #slideshow-titles .slideshow-title.active {z-index: 12; display: block;}
 #slideshow-titles .slideshow-title.last-active {z-index: 8; display: block;}
 
@@ -80,7 +80,7 @@ form {padding: 0; margin: 0;}
 	font-family: 'FontAwesome', sans-serif; font-size: 30px; line-height: 32px; color: #fff; cursor: pointer;}
 .previous-slide {left: 0; width: 23px; padding-left: 9px;}
 .next-slide {right: 0; width: 21px; padding-left: 11px;}*/
-.slide-points {position: absolute; width: 56%; max-width: 400px; height: 4px; top: 325px; right: 10%; margin: 0 auto; z-index: 12;}
+.slide-points {position: absolute; width: 56%; min-width: 300px; max-width: 400px; height: 4px; top: 325px; right: 10%; margin: 0 auto; z-index: 12;}
 .slide-changer {float: left; width: 38px; height: 4px; margin-right: 15px; background: #ebe9e9; border: none;
 	cursor: pointer; -webkit-transition-duration: 1s; transition-duration: 1s;}
 .slide-point-active {background: #35383c;}
@@ -91,7 +91,7 @@ form {padding: 0; margin: 0;}
 
 .slideshow-blocks {position: absolute; top: 350px; right: 0; width: 100%; height: 250px; overflow: hidden;
 	font-family: 'Open Sans', sans-serif; font-size: 12px; line-height: 23px; font-weight: 400; color: #35383c;}
-#slideshow-blocks .slideshow-block {position: absolute; top: 0; right: 10%; margin: 0 auto; width: 56%; max-width: 400px; min-width: 320px; height: 100%; z-index: 8; display: none;}
+#slideshow-blocks .slideshow-block {position: absolute; top: 0; right: 10%; margin: 0 auto; width: 56%; min-width: 300px; max-width: 400px; height: 100%; z-index: 8; display: none;}
 #slideshow-blocks .slideshow-block.active {z-index: 12; display: block;}
 #slideshow-blocks .slideshow-block.last-active {z-index: 8; display: block}
 
@@ -196,8 +196,12 @@ form {padding: 0; margin: 0;}
 @media only screen and (min-width: 1425px) {
 	.header {padding-left: calc(90% - 400px);}
 }
+@media only screen and (max-width: 1100px) {
+	.header {min-width: 320px; padding-right: calc(10% - 20px);}
+}
 
-@media only screen and (max-width: 1170px) {
+/*@media only screen and (max-width: 1170px) {*/
+@media only screen and (max-width: 900px) {
 	.slideshow-wrapper {width: 50%; min-width: 600px; right: 0; margin: 0 auto;}
 	.slideshow-controllers, .slideshow {width: 100%;} 
 	.main-controls {position: absolute; top: 0; width: 100%; z-index: 11;}
@@ -226,9 +230,9 @@ form {padding: 0; margin: 0;}
 	.subscribe-box input {width: calc(59% - 120px);}
 	.sign-button {width: 120px; padding: 0 31px; background-position: 85px 47%;}
 	.footer-bottom {padding-left: 16%;}
-}
+/*}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {*/
 	.slideshow-wrapper {min-width: 550px;}
 	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {max-width: 500px;}
 
@@ -241,9 +245,7 @@ form {padding: 0; margin: 0;}
 	.subscribe-box {width: 90%; margin: 0 5%;}
 	.footer-bottom {width: 100%; padding: 50px 5% 0; box-sizing: border-box;}
 	.footer-navigation, .copyright {padding-left: 20px;}
-}
 
-@media only screen and (max-width: 780px) {
 	.wrapper {padding: 0 0 35px;}
 
 	.slideshow-wrapper {width: 100%; min-width: 300px; right: 0; margin: 0 auto;}
@@ -260,11 +262,29 @@ form {padding: 0; margin: 0;}
 	.social .facebook {background-position: -50px -25px;}
 
 	.sales-block {width: 100%; min-width: 300px;}
+}
+
+@media only screen and (max-width: 780px) {
+	.wrapper {padding: 0 0 35px;}
+
+	.slideshow-wrapper {width: 100%; min-width: 300px; right: 0; margin: 0 auto;}
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {width: calc(100% - 132px); right: calc(100% - 532px); min-width: 250px;}
+
+	.arrow-link {margin-left: 20px;}
+
+	.header {padding: 30px 35px 0;}
+	.navigation {padding-left: 35px; width: 75%; min-width: 250px;}
+
+	.social .twitter {background-position: 0 -25px;}
+	.social .instagram {background-position: -25px -25px;}
+	.social .facebook {background-position: -50px -25px;}
+
+	.sales-block {width: 100%; min-width: 300px;}
 
 	/* footer */
 	.footer {padding: 70px 0 60px;}
 	.sign-text {width: 235px; padding-left: 45px;}
-	.subscribe-box {margin: 0 35px;}
+	.subscribe-box {width: calc(100% - 70px); margin: 0 35px;}
 	.subscribe-box input {width: 40%; width: calc(100% - 341px); padding: 0 15px; text-align: center;}
 	.sign-button {width: 106px; padding: 0 31px 0 17px; background-position: 71px 47%;}
 	.footer-bottom {padding: 50px 35px 0;}
