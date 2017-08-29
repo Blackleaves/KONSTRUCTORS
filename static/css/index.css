@@ -14,12 +14,12 @@ a:hover {text-decoration: underline;}
           :-moz-placeholder {color: #fff; opacity: 1;}
 
 html, body {margin: 0; padding:0; height: 100%; width: 100%; min-width: 320px; min-height: 600px;}
-body {position: relative; font-family: 'Open Sans', Arial, sans-serif; font-weight: 400; background: #f6f6f6;}
+body {position: relative; font-family: 'Open Sans', Arial, sans-serif; font-weight: 400; background: #232323;}
 img {border: 0;}
 input, button {outline: none; font-family: 'Open Sans', Arial, sans-serif; font-weight: 400;}
 form {padding: 0; margin: 0;}
 
-.wrapper {width: 100%; min-height: calc(100% - 300px); padding: 35px 35px; box-sizing: border-box;}
+.wrapper {width: 100%; padding: 35px 35px; box-sizing: border-box; background: #f6f6f6;}
 /*.centered {max-width: 1360px; margin: 0 auto; box-sizing: border-box;}*/
 .clearfix::after {content: ""; display: table; clear: both; height: 0;}
 
@@ -132,7 +132,7 @@ form {padding: 0; margin: 0;}
 	display: -webkit-grid; display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));  justify-content: space-between; align-content: flex-start; box-sizing: border-box; grid-row-gap: 35px;
     grid-column-gap: 36px; grid-auto-flow: row dense;
-	width: 100%; padding-top: 35px;}
+	width: 100%; padding-top: 35px; margin: 0 auto;}
 
 .sale {position: relative; display: block; min-width: 245px; height: 200px; box-sizing: border-box;
 	color: #fff; font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 23px; line-height: 25px; text-align: center;
@@ -193,12 +193,16 @@ form {padding: 0; margin: 0;}
 .say-hi {float: right; font-size: 11px; line-height: 16px;}
 .hello-email {color: #fff; font-style: italic; text-decoration: underline;}
 
-@media only screen and (max-width: 1199px) {
-	.slideshow-wrapper {width: 50%; min-width: 550px; right: 0; margin: 0 auto;}
+@media only screen and (min-width: 1425px) {
+	.header {padding-left: calc(90% - 400px);}
+}
+
+@media only screen and (max-width: 1170px) {
+	.slideshow-wrapper {width: 50%; min-width: 600px; right: 0; margin: 0 auto;}
 	.slideshow-controllers, .slideshow {width: 100%;} 
 	.main-controls {position: absolute; top: 0; width: 100%; z-index: 11;}
 
-	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {left: auto; right: 35px; max-width: 500px; width: calc(100% - 70px);}
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {left: auto; right: 35px; max-width: 530px; width: calc(100% - 70px);}
 
 	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block {background: transparent;}
 	.slideshow-title, .slideshow-blocks, .slideshow-block a {color: #fff;}
@@ -207,32 +211,32 @@ form {padding: 0; margin: 0;}
 
 	.overlay {width: 100%; background: rgba(53,56,60,.75);}
 
-	.header {padding-top: 30px; padding-left: 27%; padding-left: calc(25% + 35px); padding-right: 27%; padding-right: calc(25% + 35px);
+	.header {padding-top: 30px; padding-left: 27%; padding-left: calc(50% - 265px); padding-right: 27%; padding-right: calc(50% - 265px);
 		width: 100%; max-width: none; height: 60px; box-sizing: border-box;}
-	.logo {/*background-image: url(../images/white-konstructors.png);*/ color: #fff;}
-	.navigation {float: left; width: 50%; padding-left: 27%; padding-left: calc(25% + 35px); padding-right: 0;}
+	.logo {color: #fff;}
+	.navigation {float: left; width: 50%; padding-left: 27%; padding-left: calc(50% - 265px); padding-right: 0;}
+
 	.nav-link {font-size: 11px;}
 
 	.social {float: right; clear: right; margin: 240px 30px 245px 0;}
 
-	.sales-block {width: 50%; min-width: 550px;}
-	.sale {width: 45%; width: calc(50% - 13px); min-width: 262px; margin: 0;}
-	.sale:last-child {margin-right: 20px;}
-	.sale:nth-child(2n+0) {margin-right: 0;}
-}
-
-@media only screen and (max-width: 1140px) {
-	.header {padding-left: calc(50% - 240px); padding-right: calc(50% - 240px);}
-	.navigation {padding-left: calc(50% - 240px); width: 60%;}
+	.sales-block {width: 50%; min-width: 600px;}
 
 	.sign-text {width: 41%; padding-left: 45px; background-position: 15px 49%;}
 	.subscribe-box input {width: calc(59% - 120px);}
 	.sign-button {width: 120px; padding: 0 31px; background-position: 85px 47%;}
-
 	.footer-bottom {padding-left: 16%;}
 }
 
 @media only screen and (max-width: 900px) {
+	.slideshow-wrapper {min-width: 550px;}
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {max-width: 500px;}
+
+	.header {padding-left: calc(50% - 240px); padding-right: calc(50% - 240px);}
+	.navigation {padding-left: calc(50% - 240px);}
+
+	.sales-block {min-width: 550px;}
+
 	.footer {padding: 70px 10px 60px;}
 	.subscribe-box {width: 90%; margin: 0 5%;}
 	.footer-bottom {width: 100%; padding: 50px 5% 0; box-sizing: border-box;}
@@ -243,10 +247,13 @@ form {padding: 0; margin: 0;}
 	.wrapper {padding: 0 0 35px;}
 
 	.slideshow-wrapper {width: 100%; min-width: 300px; right: 0; margin: 0 auto;}
-	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {width: calc(100% - 132px); right: calc(100% - 632px);}
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {width: calc(100% - 132px); right: calc(100% - 532px);}
+
+	#slideshow-blocks .slideshow-block {min-width: 250px;}
+	.arrow-link {margin-left: 20px;}
 
 	.header {padding: 30px 35px 0;}
-	.navigation {padding-left: 35px; width: 70%;}
+	.navigation {padding-left: 35px; width: 75%;}
 
 	.social .twitter {background-position: 0 -25px;}
 	.social .instagram {background-position: -25px -25px;}
@@ -255,25 +262,33 @@ form {padding: 0; margin: 0;}
 	.sales-block {width: 100%; min-width: 300px;}
 
 	/* footer */
+	.footer {padding: 70px 0 60px;}
 	.sign-text {width: 235px; padding-left: 45px;}
+	.subscribe-box {margin: 0 35px;}
 	.subscribe-box input {width: 40%; width: calc(100% - 341px); padding: 0 15px; text-align: center;}
 	.sign-button {width: 106px; padding: 0 31px 0 17px; background-position: 71px 47%;}
+	.footer-bottom {padding: 50px 35px 0;}
 
 }
 
 @media only screen and (max-width: 640px) {
-	.sign-text {width: 140px; line-height: 14px; background-position: 15px 49%; padding: 15px 0 0 45px;}
-	.subscribe-box input {width: calc(100% - 246px); padding: 0 5px 0 10px;}
-	/*.sign-button {width: 106px; padding: 0 31px 0 17px; background-position: 71px 47%;}*/
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {width: calc(100% - 132px); right: 97px;}
+
+	.subscribe-box {height: 100px;}
+	.sign-text {width: 100%; height: 40px; padding: 0 calc(50% - 105px) 0 calc(50% - 95px); line-height: 40px; background-position: calc(50% - 115px) 49%;}
+	.subscribe-box input {float: left; width: 80%; width: calc(100% - 95px); height: 60px; padding: 0 4%; font-size: 10px;}
+	.sign-button {float: right; width: 95px; height: 60px; padding: 0 10px 0 5px; background-position: 65px 48%;}
 
 	.footer-navigation {grid-template-columns: repeat(4, max-content); height: 53px;}
 	.footer-navigation .nav-link {line-height: 26px; padding-bottom: 1px;}
 	.footer-social {margin-top: 13px;}
+
+	.footer-navigation, .copyright {padding-left: 0;}
 }
 
 @media only screen and (max-width: 570px) {
 
-	.sale {width: 100%; max-width: none; height: 175px; margin: 20px auto 0; box-sizing: border-box;
+	.sale {width: 100%; max-width: none; height: 175px; margin: 0 auto; box-sizing: border-box;
 		font-size: 23px; line-height: 25px;}
 
 	.sale-1 {padding: 45px 10px 0 25px;}
@@ -285,14 +300,18 @@ form {padding: 0; margin: 0;}
 }
 
 @media only screen and (max-width: 480px) {
-	.middle-block {display: none;}
+	.button-free, .social {display: none;}
 
-	.subscribe-box {height: 140px;}
-	.sign-text {width: 100%; height: 40px; padding: 0 calc(50% - 105px) 0 calc(50% - 80px); line-height: 40px; background-position: calc(50% - 100px) 49%;}
-	.subscribe-box input {width: 100%; height: 60px; padding: 0 5%;}
-	.sign-button {width: 100%; height: 40px; padding-left: calc(50% - 38px); padding-right: calc(50% - 38px); background-position: calc(50% + 38px) 47%;}
+	.middle-block {height: 600px;}
+	#slideshow-titles .slideshow-title, #slideshow-blocks .slideshow-block, .slide-points {width: calc(100% - 70px); right: 35px;}
 
-	.footer {padding-bottom: 20px;}
+	.slideshow-titles {top: 180px;}
+	.slide-points {top: 265px;}
+	.slideshow-blocks {top: 290px;}
+
+	.navigation {position: absolute; left: 35px; bottom: 50px; padding: 0;}
+
+	.footer {padding-top: 50px; padding-bottom: 20px;}
 	.footer-navigation {width: calc(100% - 60px); height: 53px; padding-top: 13px}
 	.footer-social {width: 27px; height: 79px; margin-top: 0; border: 1px solid #35383c; border-bottom: none;}
 	.footer-social .social-link {border-bottom: 1px solid #35383c; border-right: none;}

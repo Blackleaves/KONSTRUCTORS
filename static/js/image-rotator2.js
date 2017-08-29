@@ -1,5 +1,3 @@
-/* Promo header JS (need jQuery) */
-
 var slideInterval = null;
 var switchTime = 0;
 var allSlides = "";
@@ -140,10 +138,5 @@ $(function(){
     allTitles = $("div.slideshow-title");
     allBlocks = $("div.slideshow-block");
     allPoints = $(".slide-changer");
-    switchTime += 1;
-    // slideInterval = setInterval(slideSwitch, 4000);
-
-    sliding();
+    slideInterval = setInterval(slideSwitch, 4000);
 });
-
-/* Promo header JS END */
