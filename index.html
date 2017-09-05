@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Constructors</title>
+    <title>Konstructors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
 
@@ -13,77 +13,38 @@
     <link href='static/css/index.css' rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src='static/js/image-rotator.js' type="text/javascript"></script>
+    <!-- <script src='static/js/image-rotator.js' type="text/javascript"></script> -->
+    <script src='static/js/image-rotator2.js' type="text/javascript"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,800" rel="stylesheet">
-
 </head>
 <body>
 <div class="wrapper clearfix">
     <div class="middle-block centered">
         <div class="slideshow-wrapper">
-            <div id="slideshow" class="slideshow">
-                <div class="slider-image img-1 active"></div>
-                <div class="slider-image img-2 next">
-                    <video poster="static/images/image-2.jpg" id="slider-video-2" class="slider-video" playsinline muted loop>
-                        <source src="static/videos/linkage.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="slider-image img-3"></div>
-                <div class="slider-image img-4">
-                    <video poster="static/images/image-4.jpg" id="slider-video-4" class="slider-video" playsinline muted loop>
-                        <source src="static/videos/death_maze.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="overlay"></div>
-            </div>
-            <div class="slideshow-controllers">
-                <div id="slideshow-titles" class="slideshow-titles">
-                    <div class="slideshow-title title-1 active">WAYOUT</div>
-                    <div class="slideshow-title title-2 next">LINKAGE</div>
-                    <div class="slideshow-title title-3">GR1D</div>
-                    <div class="slideshow-title title-4">DEATH MAZE</div>
-                </div>
-                <div class="slide-points">
-                    <div class="slide-changer slide-point-1 slide-point-active" onclick="slideMove(1)"></div>
-                    <div class="slide-changer slide-point-2" onclick="slideMove(2)"></div>
-                    <div class="slide-changer slide-point-3" onclick="slideMove(3)"></div>
-                    <div class="slide-changer slide-point-4" onclick="slideMove(4)"></div>
-                </div>
-                <div id="slideshow-blocks" class="slideshow-blocks">
-                    <div class="slideshow-block block-1 active">
-                        <div class="block-text">Test limits of your brain by perfecting each puzzle. Let your mind be your guide in meditative and relaxing, yet challenging, journey</div>
-                        <div class="block-buttons">
-                            <a class="box-link" href="#" target="_blank">MORE INFO</a>
-                            <a class="arrow-link" href="#" target="_blank">GO TO STORE</a>
-                        </div>
-                    </div>
-                    <div class="slideshow-block block-2 next">
-                        <div class="block-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus purus. Praesent ornare ac nisl scelerisque volutpat. Quisque ac tellus malesuada, dictum libero in, imperdiet erat. Mauris ultrices tellus in ex auctor ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nec tristique augue, at accumsan enim. Praesent eleifend eleifend posuere. Quisque in sem semper, feugiat ante blandit, dapibus metus.</div>
-                    </div>
-                    <div class="slideshow-block block-3">
-                        <div class="block-text">And this is the third part of the text. Something is here but I am sure that it worse.</div>
-                    </div>
-                    <div class="slideshow-block block-4">
-                        <div class="block-text">This is some text related to Death Maze</div>
-                    </div>
-                </div>
+            <div id="slideshow" class="slideshow"></div>
+            <div class="overlay"></div>
+            <div class="slideshow-texts">
+                <div id="slideshow-titles" class="slideshow-titles"></div>
+                <div id="slideshow-points" class="slide-points"></div>
+                <div id="slideshow-blocks" class="slideshow-blocks"></div>
             </div>
         </div>
-        <div class="main-controls">
+        <div class="main-navs">
             <div class="header">
+                <div class="social">
+                    <a class="email-link" href="mailto:hello@konstruktors.com">HELLO@KONSTRUKTORS.COM</a>
+                    <a class="social-link twitter" href="https://twitter.com/konstructors" target="_blank"></a>
+                    <a class="social-link instagram" href="#" target="_blank"></a>
+                    <a class="social-link facebook" href="https://www.facebook.com/konstructors/" target="_blank"></a>
+                </div>
                 <div class="logo"><b>KONSTRUCTORS.</b><br>ENTERTAINMENT</div>
-                <a class="button-free" href="#" target="_blank">Get games for FREE*</a>
             </div>
-            <div class="social">
-                <a class="social-link twitter" href="https://twitter.com/konstructors" target="_blank"></a>
-                <a class="social-link instagram" href="#" target="_blank"></a>
-                <a class="social-link facebook" href="https://www.facebook.com/konstructors/" target="_blank"></a>
-            </div>
+            <div class="button-free-border"><a class="button-free" href="#" target="_blank">GET GAMES FOR FREE*</a></div>
             <div class="navigation">
-                <a class="nav-link" href="#" target="_blank">Home</a>
+                <a class="nav-link active-nav" href="#" target="_blank">Home</a>
                 <a class="nav-link" href="#" target="_blank">Games</a>
                 <a class="nav-link" href="#" target="_blank">Team</a>
                 <a class="nav-link" href="#" target="_blank">News/Blog</a>
@@ -100,11 +61,6 @@
 </div>
 <div class="footer">
     <div class="centered">
-        <div class="subscribe-box">
-            <div class="sign-text">Sign Up to know about new sales</div>
-            <input type="email" name="email" placeholder="Type your email address here ..." />
-            <button class="sign-button">SUBSCRIBE</button>
-        </div>
         <div class="footer-bottom clearfix">
             <div class="footer-navigation">
                 <a class="nav-link" href="#" target="_blank">About Us</a>
@@ -121,7 +77,6 @@
                 <a class="social-link twitter" href="https://twitter.com/konstructors" target="_blank"></a>
             </div>
             <div class="copyright">
-                <span class="say-hi">Say hi to <a class="hello-email" href="mailto:hello@konctruktors.com">hello@konctruktors.com</a></span>
                 <span class="rights">Konstructors 2017 All rights reserved</span>
             </div>
         </div>
