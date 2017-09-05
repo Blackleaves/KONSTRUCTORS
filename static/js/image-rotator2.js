@@ -10,7 +10,7 @@ var pageData = {
     "landing":[
         {"image-url": "static/images/image-1.jpg",
          "title": "WAYOUT",
-         "text": "<div class='block-text'>Test limits of your brain by perfecting each puzzle. Let your mind be your guide in meditative and relaxing, yet challenging, journey</div><div class='block-buttons'><a class='box-link' href='#' target='_blank'>MORE INFO</a><a class='arrow-link' href='#' target='_blank'>GO TO STORE</a></div>",
+         "text": "<div class='block-text'>Test limits of your brain by perfecting each puzzle. Let your mind be your guide in meditative and relaxing, yet challenging, journey</div><div class='block-buttons'><a class='slide-link green-link' href='#' target='_blank'>MORE INFO</a><a class='slide-link' href='#' target='_blank'>GO TO STORE</a></div>",
          "video": ""},
         {"image-url": "static/images/image-2.jpg",
          "title": "LINKAGE",
