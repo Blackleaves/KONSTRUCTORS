@@ -130,5 +130,5 @@ $(function(){
     allTitles = $("div.slideshow-title");
     allBlocks = $("div.slideshow-block");
     allPoints = $(".slide-changer");
-    sliderLoop = setInterval(function(){ slideSwitch() }, 4000);
+    // sliderLoop = setInterval(function(){ slideSwitch() }, 4000);
 });
