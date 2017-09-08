@@ -31,7 +31,7 @@ form {padding: 0; margin: 0;}
 	background: transparent url(../images/konstructors.png) left bottom no-repeat; background-size: 230px auto;
 	/*font-family: 'Montserrat', Arial, sans-serif; font-size: 14.5px; line-height: 15px; font-weight: 400; color: #35383c;*/
 	font-size: 0; color: transparent;}
-.logo b {font-size: 25.5px; font-weight: 800;}
+/*.logo b {font-size: 25.5px; font-weight: 800;}*/
 
 .social {position: absolute; top: 55px; z-index: 13; box-sizing: border-box; right: 0; width: 400px; height: 25px; margin: 0 55px 0 calc(50% - 405px);}
 
@@ -82,7 +82,7 @@ form {padding: 0; margin: 0;}
 .button-free:hover {text-decoration: none; cursor: pointer; box-shadow: 0 0 3px 0 rgba(0,0,0,.3);}
 
 .navigation {position: absolute; bottom: 65px; right: calc(50% + 130px); clear: both;
-	width: 32%; min-width: 350px; max-width: 475px; opacity: .99; z-index: 13;}
+	width: 32%; width: calc(31% + 15.5px); min-width: 350px; max-width: 475px; opacity: .99; z-index: 13;}
 .nav-link {position: relative; display: block; float: left; padding: 0 30px 0 0; margin: 0 0; font-size: 13px; line-height: 15px; color: #c6c4c4; text-align: left;
 	-webkit-transition-duration: .5s; transition-duration: .5s;}
 .nav-link:hover {text-decoration: none; cursor: pointer; color: #999;}
@@ -104,7 +104,6 @@ form {padding: 0; margin: 0;}
 .img-1 {background: url('../images/image-1.jpg') no-repeat center center;}
 .img-2 {background: url('../images/image-2.jpg') no-repeat center center;}
 .img-3 {background: url('../images/image-3.jpg') no-repeat center center;}
-/*.img-4 {background: url('../images/image-4.jpg') no-repeat center center; background-size: cover;}*/
 .img-4 {background: #666 no-repeat center center; background-size: cover;}
 
 .slider-video {display: block; height: 100%; margin-left: -50%; margin-left: calc(50% - 622px);
@@ -160,6 +159,14 @@ form {padding: 0; margin: 0;}
 .copyright {float: left; clear: both; padding-top: 15px; font-family: 'Montserrat', Arial, sans-serif; color: #8c8c8e; box-sizing: border-box;}
 .rights {float: left; padding-left: 0; font-size: 12px; line-height: 16px;}
 
+@media only screen and (min-width: 1950px) {
+.logo {float: left; padding-right: 0; margin-left: 320px;}
+#slideshow-titles .slideshow-title {right: auto; left: 320px;}
+.slide-points {float: left; padding-right: 0; padding-left: 320px;}
+#slideshow-blocks .slideshow-block {right: auto; left: 320px;}
+.navigation {right: auto; left: 320px;}
+}
+
 @media only screen and (max-width: 1250px) {
 	.middle-block {height: 720px;}
 	.slideshow-texts {padding-top: 110px;}
@@ -167,11 +174,9 @@ form {padding: 0; margin: 0;}
 	.social {width: 345px;}
 	.email-link {letter-spacing: 1px;}
 	.social-link {margin-left: 15px;}
-
-	.navigation {width: 33%;}
 }
 @media only screen and (max-width: 1200px) {
-	.logo {float: left; padding: 0; margin-left: 65px; width: auto; min-width: auto;}
+	.logo {float: left; padding: 0; margin-left: 65px; width: 230px; min-width: auto;}
 
 	.social {right: calc(25% - 200px); margin: 0;}
 
@@ -238,6 +243,7 @@ form {padding: 0; margin: 0;}
 
 	.logo {top: 12px; left: 30px;}
 
+	.slideshow-texts {padding-top: 175px;}
 	#slideshow-titles .slideshow-title {left: 30px; right: 50px; min-width: 240px; max-width: none;}
 	.slide-points {padding-left: 30px; padding-right: 50px; min-width: 240px; max-width: none;}
 	#slideshow-blocks .slideshow-block {left: 30px; right: 50px; min-width: 240px; max-width: none;}
