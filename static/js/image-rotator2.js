@@ -124,6 +124,11 @@ function stopVideo(){
     } catch(err){}
 }
 
+function navClick(){
+    $('#mobile-nav').toggleClass('mobile-navigation-active');
+    $('body').toggleClass('locked');
+}
+
 $(function(){
     generateSlider();
     allSlides = $("div.slideshow-image");
