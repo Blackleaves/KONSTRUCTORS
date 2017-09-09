@@ -86,22 +86,22 @@ function slideSwitch() {
     var current_image = $(allSlides[current]);
     var next_image = $(allSlides[next]);
     current_image.addClass('last-active');
-    next_image.addClass('active').css({opacity: 0.0, display: "block", left: '+=100%'}).animate({opacity: 1.0, left: '-=100%'}, 1000, function() {/*stopVideo();*/});
-    current_image.css({opacity: 1.0}).animate({opacity: 0.0}, 1500, function() {current_image.removeClass('active').removeClass('last-active');$(current_image).css("display", "none");});
+    next_image.addClass('active').css({opacity: 0.0, display: "block"}).animate({opacity: 1.0}, 1500, function() {/*stopVideo();*/});
+    current_image.css({opacity: 1.0}).animate({opacity: 0.0}, 1000, function() {current_image.removeClass('active').removeClass('last-active');$(current_image).css("display", "none");});
 
     /* title */
     var current_title = $(allTitles[current]);
     var next_title = $(allTitles[next]);
     current_title.addClass('last-active');
-    next_title.addClass('active').css({opacity: 0.0, right: '-=200px'}).animate({opacity: 1.0, right: '+=200px'}, 1000, function() {next_title.removeClass('next');});
-    current_title.css({opacity: 1.0}).animate({opacity: 0.0, right: '+=100px'}, 1000, function() {current_title.removeClass('active').removeClass('last-active').css({right: '-=100px'});});
+    next_title.addClass('active').css({opacity: 0.0}).animate({opacity: 1.0}, 1500, function() {next_title.removeClass('next');});
+    current_title.css({opacity: 1.0}).animate({opacity: 0.0}, 1000, function() {current_title.removeClass('active').removeClass('last-active');});
 
     /* block */
     var current_block = $(allBlocks[current]);
     var next_block = $(allBlocks[next]);
     current_block.addClass('last-active');
-    next_block.addClass('active').css({opacity: 0.0, right: '-=200px'}).animate({opacity: 1.0, right: '+=200px'}, 1000, function() {next_block.removeClass('next');});
-    current_block.css({opacity: 1.0}).animate({opacity: 0.0, right: '+=100px'}, 1000, function() {current_block.removeClass('active').removeClass('last-active').css({right: '-=100px'});});
+    next_block.addClass('active').css({opacity: 0.0}).animate({opacity: 1.0}, 1500, function() {next_block.removeClass('next');});
+    current_block.css({opacity: 1.0}).animate({opacity: 0.0}, 1000, function() {current_block.removeClass('active').removeClass('last-active');});
 
     /* pointer */
     var point = $('.slide-point-active');
