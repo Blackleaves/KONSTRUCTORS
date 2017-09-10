@@ -164,6 +164,9 @@ form {padding: 0; margin: 0;}
 	#slideshow-blocks .slideshow-block {right: auto; left: 320px;}
 	.navigation {right: auto; left: 320px;}
 }
+@media only screen and (max-width: 1650px) {
+	.sales-block {grid-template-columns: repeat(2, minmax(350px,1fr)); justify-content: space-around;}
+}
 @media only screen and (max-width: 1250px) {
 	.middle-block {height: 720px;}
 	.slideshow-texts {padding-top: 110px;}
