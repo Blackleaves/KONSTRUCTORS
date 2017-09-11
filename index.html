@@ -14,17 +14,35 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- <script src='static/js/image-rotator.js' type="text/javascript"></script> -->
-    <script src='static/js/image-rotator2.js' type="text/javascript"></script>
+    <script src='static/js/generate-slider.js' type="text/javascript"></script>
+    <script src='static/js/image-rotator.js' type="text/javascript"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,800" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper clearfix">
+    <div class="mobile-overlay"></div>
+    <div id="mobile-nav" class="mobile-navigation">
+        <div class="close-btn" href="#" target="_blank" onclick="navClick()"></div>
+        <a class="nav-link active-nav" href="#" target="_blank">HOME</a>
+        <a class="nav-link" href="#" target="_blank">GAMES</a>
+        <a class="nav-link" href="#" target="_blank">TEAM</a>
+        <a class="nav-link" href="#" target="_blank">NEWS/BLOG</a>
+        <a class="nav-link contacts" href="#" target="_blank">CONTACTS</a>
+    </div>
     <div class="middle-block centered">
-        <div class="slideshow-wrapper">
-            <div id="slideshow" class="slideshow"></div>
+         <div class="slideshow-wrapper">
+            <div id="slideshow" class="slideshow">
+                <div class="slideshow-image active" style="display: block; background: url('static/images/image-1.jpg') center center / cover no-repeat transparent;"></div>
+                <div class="slideshow-image" style="display: none; background: url('static/images/image-2.jpg') center center / cover no-repeat transparent;">
+                    <video poster="static/images/image-2.jpg" id="slider-video-1" class="slider-video" playsinline="" muted="" loop=""><source src="static/videos/linkage.mp4" type="video/mp4"></video>
+                </div>
+                <div class="slideshow-image" style="display: none; background: url('static/images/image-3.jpg') center center / cover no-repeat transparent;"></div>
+                <div class="slideshow-image active last-active" style="display: none; background: url('') center center / cover no-repeat transparent;">
+                    <video poster="" id="slider-video-3" class="slider-video" playsinline="" muted="" loop=""><source src="static/videos/death_maze.mp4" type="video/mp4"></video></div>
+                </div>
             <div class="overlay"></div>
         </div>
         <div class="main-navs">
@@ -32,17 +50,38 @@
                 <div class="logo"><b>KONSTRUCTORS.</b><br>ENTERTAINMENT</div>
             </div>
             <div class="slideshow-texts">
-                <div id="slideshow-titles" class="slideshow-titles"></div>
-                <div id="slideshow-points" class="slide-points"></div>
-                <div id="slideshow-blocks" class="slideshow-blocks"></div>
+                <div id="slideshow-titles" class="slideshow-titles">
+                    <div class="slideshow-title active">WAYOUT</div>
+                    <div class="slideshow-title">LINKAGE</div>
+                    <div class="slideshow-title">GR1D</div>
+                    <div class="slideshow-title">DEATH MAZE</div>
+                </div>
+                <div id="slideshow-points" class="slide-points">
+                    <button class="slide-changer p0 slide-point-active" onclick="slideMove(0)" disabled=""></button>
+                    <button class="slide-changer p1" onclick="slideMove(1)"></button>
+                    <button class="slide-changer p2" onclick="slideMove(2)"></button>
+                    <button class="slide-changer p3" onclick="slideMove(3)"></button>
+                </div>
+                <div id="slideshow-blocks" class="slideshow-blocks">
+                    <div class="slideshow-block active">
+                        <div class="block-text">Test limits of your brain by perfecting each puzzle. Let your mind be your guide in meditative and relaxing, yet challenging, journey</div>
+                        <div class="block-buttons">
+                            <a class="slide-link green-link" href="#" target="_blank">MORE INFO</a><a class="slide-link" href="#" target="_blank">GO TO STORE</a>
+                        </div>
+                    </div>
+                    <div class="slideshow-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus purus. Praesent ornare ac nisl scelerisque volutpat. Quisque ac tellus malesuada, dictum libero in, imperdiet erat. Mauris ultrices tellus in ex auctor ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nec tristique augue, at accumsan enim.</div>
+                    <div class="slideshow-block">And this is the third part of the text. Something is here but I am sure that it worse.</div>
+                    <div class="slideshow-block">This is some text related to Death Maze</div>
+                </div>
             </div>
             <div class="social">
                 <a class="email-link" href="mailto:hello@konstruktors.com">HELLO@KONSTRUKTORS.COM</a>
                 <a class="social-link twitter" href="https://twitter.com/konstructors" target="_blank"></a>
                 <a class="social-link instagram" href="#" target="_blank"></a>
                 <a class="social-link facebook" href="https://www.facebook.com/konstructors/" target="_blank"></a>
+                <a class="social-link steam" href="" target="_blank"></a>
             </div>
-            <a class="button-free" href="#" target="_blank"><span>GET GAMES FOR FREE*</span></a>
+            <a class="button-free" href="#" target="_blank"><span>GET GAMES<br/>FOR FREE*</span></a>
             <div class="navigation">
                 <a class="nav-link active-nav" href="#" target="_blank">Home</a>
                 <a class="nav-link" href="#" target="_blank">Games</a>
@@ -62,7 +101,7 @@
 <div class="footer">
     <div class="centered">
         <div class="footer-bottom clearfix">
-            <div class="footer-navigation">
+            <div class="footer-navigation clearfix">
                 <a class="nav-link" href="#" target="_blank">About Us</a>
                 <a class="nav-link" href="#" target="_blank">Games</a>
                 <a class="nav-link" href="#" target="_blank">Support</a>
@@ -72,9 +111,11 @@
                 <a class="nav-link" href="#" target="_blank">Get free games</a>
             </div>
             <div class="footer-social">
+                <a class="social-link steam" href="" target="_blank"></a>
                 <a class="social-link facebook" href="https://www.facebook.com/konstructors/" target="_blank"></a>                
                 <a class="social-link instagram" href="#" target="_blank"></a>
                 <a class="social-link twitter" href="https://twitter.com/konstructors" target="_blank"></a>
+                <a class="social-link email" href="mailto:hello@konstruktors.com"></a>
             </div>
             <div class="copyright">
                 <span class="rights">Konstructors 2017 All rights reserved</span>
