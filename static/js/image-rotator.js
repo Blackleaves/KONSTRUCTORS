@@ -74,7 +74,7 @@ function slideMove(number){
 
 function stopVideo(){
     try {
-        var last_video_id = 'slider-video-' + ((iter >1) ? iter : 1);
+        var last_video_id = 'slider-video-' + ((iter >0) ? iter : 0);
         document.getElementById(last_video_id).pause();
     } catch(err){}
 }
@@ -90,5 +90,9 @@ $(function(){
     allTitles = $("div.slideshow-title");
     allBlocks = $("div.slideshow-block");
     allPoints = $(".slide-changer");
+    try {
+        var last_video_id = 'slider-video-0';
+        document.getElementById(last_video_id).play();
+    } catch(err){}
     sliderLoop = setInterval(function(){ slideSwitch() }, 4000);
 });

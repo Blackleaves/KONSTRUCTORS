@@ -109,7 +109,7 @@ form {padding: 0; margin: 0;}
 .img-3 {background: url('../images/image-3.jpg') no-repeat center center;}
 .img-4 {background: #666 no-repeat center center; background-size: cover;}
 
-.slider-video {display: block; height: 100%; margin-left: -50%; margin-left: calc(50% - 622px);
+.slider-video {display: block; height: 100%; margin-left: -50%; margin-left: calc(50% - 720px);
 	background: url('../images/image-2.jpg') no-repeat; background-size: cover;}
 
 .overlay {position: absolute; width: 50%;  width: calc(50% - 25px); height: 100%; top: 0; right: 0; background: #ccc; z-index: 11; background: rgba(53,56,60,.2);}
@@ -173,6 +173,7 @@ form {padding: 0; margin: 0;}
 @media only screen and (max-width: 1250px) {
 	.middle-block {height: 720px;}
 	.slideshow-texts {padding-top: 110px;}
+	.slider-video {margin-left: calc(50% - 640px);}
 
 	.social {width: 337px;}
 	.email-link {letter-spacing: 1px;}
@@ -254,6 +255,8 @@ form {padding: 0; margin: 0;}
 
 	.slideshow-titles {height: 50px; font-size: 45px; line-height: 45px;}
 	.slide-changer {width: 30px; height: 4px; margin-right: 10px;}
+
+	.slider-video {margin-left: calc(50% - 534px);}
 
 	.button-free {right: 20px; bottom: 0; margin-bottom: -57px;}
 	.sales-block {padding: 80px 30px 35px; grid-column-gap: 30px;}
